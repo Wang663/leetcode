@@ -1,3 +1,0 @@
-test
-master
-feature1
