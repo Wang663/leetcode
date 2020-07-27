@@ -36,25 +36,21 @@ class Solution(object):
         stack = [-1]
         for i in range(len(heights)):
             while stack[-1] != -1 and heights[stack[-1]] > heights[i]:
-                res = max(res,heights[stack.pop(-1)]*(i-stack[-1]-1))
+                res = max(res, heights[stack.pop(-1)] * (i - stack[-1] - 1))
             stack.append(i)
             print(stack)
             print(res)
         length = len(heights)
 
         for i in stack[::-1]:
-            if i==-1:
+            if i == -1:
                 continue
-            res = max(res,heights[stack.pop(-1)]*(length-stack[-1]-1))
+            res = max(res, heights[stack.pop(-1)] * (length - stack[-1] - 1))
         return res
+
 
 # leetcode submit region end(Prohibit modification and deletion)
 if __name__ == '__main__':
-    # solution = Solution()
-    # res = solution.largestRectangleArea([2, 1, 5, 6, 2, 3])
-    # print(res)
-    i = reversed([1, 2, 3])
-    l = list(123)
-
-
-
+    solution = Solution()
+    res = solution.largestRectangleArea([1, 0, 3, 2, 2])
+    print(res)
