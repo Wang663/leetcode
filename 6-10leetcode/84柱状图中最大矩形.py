@@ -54,5 +54,3 @@ if __name__ == '__main__':
     solution = Solution()
     res = solution.largestRectangleArea([1, 0, 3, 2, 2])
     print(res)
-    # i = reversed([1,0,3,2,2])
-    # l = list(123)
